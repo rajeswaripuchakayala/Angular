@@ -1,0 +1,23 @@
+<h1 appColor> Employee Details </h1>
+<table class="table table-dark table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Emp ID</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Salary</th>
+            <th scope="col">DOB</th>
+            <th scope="col">Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr appColor *ngFor="let emp of empdata">
+            <td  scope="col"> {{emp.Employee_ID}} </td>
+            <td scope="col"> {{emp.First_Name}} </td>
+            <td scope="col"> {{emp.Last_Name}} </td>
+            <td scope="col"> {{emp.Salary | currency}}</td>
+            <td scope="col"> {{emp.DOB | date: 'MM/dd/yyyy'}} </td>
+            <td scope="col"> {{emp.Email}} </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,22 @@
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Full Name" name="name" ngModel>
+    </div><br>
+    <div class="form-group">    
+        <input type="email" class="form-control"  placeholder="Email" name="email" ngModel>
+    </div><br>
+    <div class="form=group">
+        <input type="phonenumber" class="form-control" placeholder="Phone No." name="phoneno" ngModel>
+    </div><br>
+    <div class="form-group">
+        <input type="password" class="form-control" placeholder="Password" name="password" ngModel>
+    </div><br>
+    <div class="form-group">
+        <input type="password" class="form-control" placeholder="Confirm Password" name="confirmpassword" ngModel>
+    </div><br>
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Agree with terms and conditions</label>
+      </div><br>
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+</form>

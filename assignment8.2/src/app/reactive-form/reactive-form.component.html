@@ -1,0 +1,25 @@
+<form [formGroup]="registerForm" (ngSubmit)="postData()">
+    <div class="form-group">
+        <input type="name" class="form-control" placeholder="Full Name" formControlName="name">
+    </div><br>
+    <div class="form-group">
+        <input type="email" class="form-control" placeholder="Email" formControlName="email">
+    </div><br>
+    <div class="form-group">
+        <input type="address" class="form-control" placeholder="Address" formControlName="address">
+    </div><br>
+    <div class="form-group">
+        <input type="city" class="form-control" placeholder="City" formControlName="city">
+    </div><br>
+    <div class="form-group">
+        <input type="phoneno" class="form-control" placeholder="Phone No." formControlName="phoneno">
+    </div><br>
+    <div class="form-group">
+        <input type="password" class="form-control" placeholder="Password" formControlName="password">
+    </div><br>
+    <div class="form-group">
+        <input type="password" class="form-control" placeholder="Confirm Password" formControlName="confirmpassword">
+    </div><br>
+    <input type="checkbox" formControlName="checkbox"> Agree with terms and conditions<br><br>
+    <button type="register" class="btn btn-primary">Register</button>
+</form>

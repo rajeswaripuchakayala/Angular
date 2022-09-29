@@ -1,0 +1,46 @@
+<h1>Directives and Pipes</h1><br>
+<h2>Exmaples of Structural Directives</h2>
+<h3>Example for the *ngIf</h3>
+<li *ngIf="course">
+    <!--{{course | date:short}}-->
+</li>
+<h3>ngIf with then and else Clauses</h3>
+<li *ngIf="course; then truecondition; else falsecondition">
+    {{course}}
+</li>
+<ng-template #truecondition>
+    <div style="color: green">If the condition is true, it's shows the course variable</div>
+</ng-template>
+<ng-template #falsecondition>
+    <div style="color: red">If the condition is false, Course variable doesn't hold any vlaue to display</div>
+</ng-template>
+
+<br><h3>*ngFor Example</h3>
+<ul *ngFor="let product of products">
+    <li *ngIf="product.price>20000">
+        {{product.name}}:{{product.price}}
+    </li>
+</ul>
+<br><h3>*ngSwitch Example</h3>
+<ul *ngFor="let course of courses"
+    [ngSwitch]="course.category">
+    <li *ngSwitchCase="'Computing'">
+        {{course.name}} ({{course.category}})
+    </li>
+    <li *ngSwitchCase="'Front-end Development'">
+        {{course.name}} ({{course.category}})
+    </li>
+    <li *ngSwitchDefault>
+        {{course.name}} ({{course.category}})
+    </li>
+</ul>
+
+<br><h2>Exmaples of Attribute Directives</h2>
+<p>Passing an array of Classes:</p>
+<button [ngClass]="['btn', 'btn-primary']">Button</button>
+
+<h2>Two way data binding</h2>
+<div class="form-group">
+    <input class="form-control" type="text" [(ngModel)]="userInput">
+</div>
+<p> Result for <b>{{userInput}}</b></p>

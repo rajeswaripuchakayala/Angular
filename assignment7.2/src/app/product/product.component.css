@@ -1,0 +1,16 @@
+th{
+    font-size: 1.7em;
+    border: 2px solid black;
+}
+td{
+    color: black;
+    font-size: 1.5em;
+    border: 2px solid black;
+}
+table{
+    width:60%;
+    border: 2px solid black;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}

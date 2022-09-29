@@ -1,0 +1,21 @@
+<br>
+<br>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">S.No</th>
+            <th scope="col" style="text-align: left;">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of productsDetails">
+            <td scope="col">{{product.s_no}}</td>
+            <td scope="col"  style="text-align: left;">{{product.name}}</td>
+            <td scope="col">{{product.price}}</td>
+            <td scope="col"><button type="button" class="btn btn-primary" (click)="productDetails(product.s_no)">View Detail</button></td>
+        </tr>
+    </tbody>
+</table>
+    

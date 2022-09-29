@@ -1,0 +1,23 @@
+<h1> Employee Details </h1>
+<table class="table  table-bordered" >
+    <thead>
+        <tr>
+            <th scope="col">Emp ID</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Salary</th>
+            <th scope="col">DOB</th>
+            <th scope="col">Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr  *ngFor="let emp of empdata" appColor>
+            <td  scope="col"> {{emp.Employee_ID}} </td>
+            <td scope="col"> {{emp.First_Name}} </td>
+            <td scope="col"> {{emp.Last_Name}} </td>
+            <td scope="col"> {{emp.Salary}} </td>
+            <td scope="col"> {{emp.DOB}} </td>
+            <td scope="col"> {{emp.Email}} </td>
+        </tr>
+    </tbody>
+</table>

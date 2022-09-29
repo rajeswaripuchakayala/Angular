@@ -1,0 +1,77 @@
+<h1>Employees</h1>
+<table  class="table table-dark table-bordered">
+    <thead  >
+        <tr>
+            <th scope="col">Employee ID</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Salary</th>
+            <th scope="col">DOB</th>
+            <th scope="col">Email</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let emp of empdata" >
+            <td scope="col">
+                <div *ngIf="emp.showEdit">
+                    <input type="text" [(ngModel)]="emp.Employee_ID" class="form-control">
+                </div>
+                <div *ngIf="!emp.showEdit">
+                    {{emp.Employee_ID}}
+                </div>
+            </td>
+            <td scope="col">
+                <div *ngIf="emp.showEdit">
+                    <input type="text" [(ngModel)]="emp.First_Name" class="form-control">
+                </div>
+                <div *ngIf="!emp.showEdit">
+                    {{emp.First_Name}}
+                </div>
+            </td>
+            <td scope="col">
+                <div *ngIf="emp.showEdit">
+                    <input type="text" [(ngModel)]="emp.Last_Name" class="form-control">
+                </div> 
+                <div *ngIf="!emp.showEdit">
+                    {{emp.Last_Name}}
+                </div>
+            </td>
+            <td scope="col">
+                <div *ngIf="emp.showEdit">
+                    <input type="text" [(ngModel)]="emp.Salary" class="form-control">
+                </div>
+                <div *ngIf="!emp.showEdit">
+                    {{emp.Salary}}
+                </div>
+            </td>
+            <td scope="col">
+                <div *ngIf="emp.showEdit">
+                    <input type="text" [(ngModel)]="emp.DOB" class="form-control">
+                </div>
+                <div *ngIf="!emp.showEdit">
+                    {{emp.DOB}}
+                </div>
+            </td>
+            <td scope="col">
+                <div *ngIf="emp.showEdit">
+                    <input type="text" [(ngModel)]="emp.Email" class="form-control">
+                </div>
+                <div *ngIf="!emp.showEdit">
+                    {{emp.Email}}
+                </div>
+            </td>
+            <td scope="col">
+                <div *ngIf="emp.showEdit">
+                    <button class="btn btn-primary" (click)="UpdateEmp(emp)" style="margin-right: 10px">Update</button>
+                    <button class="btn btn-primary" (click)="emp.showEdit= false">Cancel</button>
+                </div>
+                <div *ngIf="!emp.showEdit">
+                    <button class="btn btn-primary" (click)="EditEmp(emp)">Edit</button>
+                </div>
+                
+                
+            </td>
+        </tr>
+    </tbody>
+</table>

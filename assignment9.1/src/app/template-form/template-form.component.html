@@ -1,0 +1,28 @@
+<form #userForm="ngForm" (ngSubmit)="submitForm(userForm.value)">
+    <div class="form-group">
+        <input type="name" required #name="ngModel" pattern="namePattern" maxlength="15" class="form-control" placeholder="Full Name" name="name" ngModel>
+        <div class="error-msg" *ngIf="(name.touched || userForm.submitted) && name.errors?.required">Full Name is required!</div>
+        <div class="error-msg" *ngIf="(name.touched || userForm.submitted) && name.errors?.pattern">Enter valid name</div>
+    </div>
+    <div class="form-group">
+        <input type="email" required #email="ngModel" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" placeholder="Email" name="email" ngModel>
+        <span *ngIf="email.invalid && email.touched" style="color: red;"> Email is required</span>
+    </div>
+    <div class="form-group">
+        <input type="phoneno" required #phno="ngModel" pattern="mobNumberPattern" minlength="10" maxlength="12" class="form-control" placeholder="Phone No." name="phno" ngModel>
+        <span *ngIf="phno.invalid && phno.touched" style="color: red;"> Phone Number is required</span>
+    </div>
+    <div class="form-group">
+        <input type="password" required #password="ngModel" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,16}$" class="form-control" placeholder="Password" name="password" ngModel>
+        <span *ngIf="password.invalid && password.touched" style="color: red;"> Password is required</span>
+    </div>
+    <div class="form-group">
+        <input type="password" required #confirmpassword="ngModel" class="form-control" placeholder="Confirm Password" name="confirmpassword" ngModel>
+        <span  *ngIf="confirmpassword.invalid && confirmpassword.touched" style="color: red;"> Confirm password is required</span>
+    </div>
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input">
+        <label class="form-check-label" for="exampleCheck1"> Agree with terms and conditions</label>
+    </div>
+    <button [disabled]="userForm.invalid" type="submit" class="btn btn-primary">Register</button>
+</form>

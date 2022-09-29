@@ -1,0 +1,30 @@
+[
+    {
+        "s_no": 1,
+        "name": "Nokia 5.1 Plus",
+        "price": 8999,
+        "description": "Nokia 3GB/32GB",
+        "imageUrl": "./assets/Nokia.jpg"
+    },
+    {
+        "s_no": 2,
+        "name": "Samsung A10s",
+        "price": 10999,
+        "description": "Samsung 4GB/64GB",
+        "imageUrl": "./assets/Samsung.jpg"
+    },
+    {
+        "s_no": 3,
+        "name": "Redmi Mi note pro",
+        "price": 12999,
+        "description": "Redmi 2GB/16GB",
+        "imageUrl": "./assets/Redmi.jpg"
+    },
+    {
+        "s_no": 4,
+        "name": "Vivo Y2",
+        "price": 9500,
+        "description": "Vivo 4GB/32GB",
+        "imageUrl": "./assets/Vivo.png"
+    }
+]
